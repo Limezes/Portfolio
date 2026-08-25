@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kilo — магазин техники</title>
+  <meta name="description" content="Kilo — интернет-магазин техники: наушники, клавиатуры, мыши, мониторы. Быстрая доставка и гарантия.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Навигация -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__logo">KILO<span>.</span></a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#catalog">Каталог</a>
+        <a href="#features">Преимущества</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="cart-btn" id="cartBtn" aria-label="Корзина">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="nav__burger" id="navBurger" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="hero__tag">Сезонная распродажа до −30%</span>
+        <h1>Техника, которая работает на&nbsp;тебя</h1>
+        <p>Проверенные девайсы для работы и дома: наушники, клавиатуры, мыши, мониторы. Доставка от 1 дня, гарантия 2 года.</p>
+        <div class="hero__actions">
+          <a href="#catalog" class="btn btn--primary">Перейти в каталог</a>
+          <a href="#features" class="btn btn--ghost">Почему Kilo</a>
+        </div>
+      </div>
+      <div class="hero__art" aria-hidden="true">
+        <div class="hero-art__card hero-art__card--1"><img src="../../images/shop-hp-1.jpg" alt=""></div>
+        <div class="hero-art__card hero-art__card--2"><img src="../../images/shop-kb-1.jpg" alt=""></div>
+        <div class="hero-art__card hero-art__card--3"><img src="../../images/shop-mouse-1.jpg" alt=""></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Каталог -->
+  <section class="catalog section" id="catalog">
+    <div class="container">
+      <h2 class="section__title">Каталог</h2>
+      <p class="section__sub">Выберите категорию и добавьте товар в корзину.</p>
+
+      <div class="filters" id="filters">
+        <button class="filter is-active" data-filter="all">Все</button>
+        <button class="filter" data-filter="headphones">Наушники</button>
+        <button class="filter" data-filter="keyboards">Клавиатуры</button>
+        <button class="filter" data-filter="mice">Мыши</button>
+        <button class="filter" data-filter="monitors">Мониторы</button>
+      </div>
+
+      <div class="grid" id="products"></div>
+    </div>
+  </section>
+
+  <!-- Преимущества -->
+  <section class="section" id="features">
+    <div class="container">
+      <h2 class="section__title">Почему выбирают Kilo</h2>
+      <div class="features">
+        <div class="feature">
+          <div class="feature__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg></div>
+          <h3>Доставка 1–3 дня</h3><p>По всему городу и в регионы. Бесплатно от 5 000 ₽.</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>Гарантия 2 года</h3><p>Официальная гарантия на всю технику.</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5v0a5.5 5.5 0 0 1-5.5 5.5H11"/></svg></div>
+          <h3>Возврат 30 дней</h3><p>Не подошло — вернём деньги без вопросов.</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg></div>
+          <h3>Поддержка 24/7</h3><p>Поможем выбрать и настроить технику.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section class="section section--contact" id="contact">
+    <div class="container container--narrow contact">
+      <h2>Остались вопросы?</h2>
+      <p>Напишите нам — ответим в течение 15 минут.</p>
+      <a href="mailto:hello@kilo.shop" class="btn btn--primary btn--lg">hello@kilo.shop</a>
+      <div class="contact__phone">+7 900 000-00-00</div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© 2026 Kilo</span>
+      <nav>
+        <a href="#catalog">Каталог</a>
+        <a href="#features">Преимущества</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Модалка товара -->
+  <div class="modal" id="productModal" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__card">
+      <button class="modal__close" data-close aria-label="Закрыть">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+      <div class="modal__art" id="modalArt"></div>
+      <div class="modal__body">
+        <span class="modal__cat" id="modalCat">Наушники</span>
+        <h3 id="modalName">Товар</h3>
+        <p id="modalDesc">Описание товара.</p>
+        <div class="modal__price" id="modalPrice">0 ₽</div>
+        <button class="btn btn--primary btn--block" id="modalAdd">В корзину</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Корзина -->
+  <aside class="cart" id="cartPanel" aria-hidden="true">
+    <div class="cart__head">
+      <h3>Корзина</h3>
+      <button class="cart__close" id="cartClose" aria-label="Закрыть">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+    <div class="cart__items" id="cartItems"></div>
+    <div class="cart__foot">
+      <div class="cart__total">Итого: <b id="cartTotal">0 ₽</b></div>
+      <button class="btn btn--primary btn--block" id="cartCheckout">Оформить заказ</button>
+      <div class="cart__success" id="cartSuccess" hidden>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+        Заказ оформлен (демо)
+      </div>
+    </div>
+  </aside>
+  <div class="cart__overlay" id="cartOverlay" hidden></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
