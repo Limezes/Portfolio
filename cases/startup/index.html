@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nimbus — рабочее пространство для команд</title>
+  <meta name="description" content="Nimbus — облачная платформа, которая объединяет задачи, аналитику и общение команды в одном окне.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Навигация -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__logo">
+        <span class="nav__logo-mark" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4L12 2Z" fill="currentColor"/></svg>
+        </span>
+        Nimbus
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#features">Возможности</a>
+        <a href="#pricing">Тарифы</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav__actions">
+        <a href="#pricing" class="btn btn--ghost">Войти</a>
+        <a href="#cta" class="btn btn--primary">Попробовать</a>
+        <button class="nav__burger" id="navBurger" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="hero__bg" aria-hidden="true"><img src="../../images/hero.jpg" alt="" loading="lazy"></div>
+    <div class="hero__glow hero__glow--1"></div>
+    <div class="hero__glow hero__glow--2"></div>
+    <div class="container hero__inner">
+      <span class="badge">
+        <svg class="badge__icon" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+        Новое — Nimbus AI 2.0
+      </span>
+      <h1 class="hero__title">Команды работают <span class="grad-text">быстрее</span> с&nbsp;Nimbus</h1>
+      <p class="hero__sub">Задачи, аналитика и общение — в одном окне. Nimbus объединяет всю работу команды и даёт руководителю полную картину проекта в реальном времени.</p>
+      <div class="hero__actions">
+        <a href="#cta" class="btn btn--primary btn--lg">Попробовать бесплатно</a>
+        <a href="#features" class="btn btn--ghost btn--lg">Смотреть демо</a>
+      </div>
+      <div class="hero__stats">
+        <div class="stat"><b>5 000+</b><span>команд</span></div>
+        <div class="stat"><b>99.9%</b><span>аптайм</span></div>
+        <div class="stat"><b>4.9</b><span>рейтинг</span></div>
+        <div class="stat"><b>40%</b><span>быстрее планы</span></div>
+      </div>
+
+      <!-- Мок-ап продукта -->
+      <div class="mockup" aria-hidden="true">
+        <div class="mockup__bar">
+          <span class="mockup__dot"></span>
+          <span class="mockup__dot"></span>
+          <span class="mockup__dot"></span>
+          <span class="mockup__url">app.nimbus.io/projects</span>
+        </div>
+        <div class="mockup__body">
+          <div class="mockup__side">
+            <span class="mockup__side-item is-active">Проекты</span>
+            <span class="mockup__side-item">Задачи</span>
+            <span class="mockup__side-item">Аналитика</span>
+            <span class="mockup__side-item">Календарь</span>
+          </div>
+          <div class="mockup__main">
+            <div class="mockup__row">
+              <span class="chip chip--violet">Запуск сайта</span>
+              <span class="chip chip--done">Готово на 78%</span>
+            </div>
+            <div class="mockup__cards">
+              <div class="mc mc--1"><i></i><span>Дизайн</span><b>12/14</b></div>
+              <div class="mc mc--2"><i></i><span>Разработка</span><b>9/12</b></div>
+              <div class="mc mc--3"><i></i><span>Контент</span><b>5/6</b></div>
+            </div>
+            <div class="mockup__chart">
+              <span style="height:34%"></span><span style="height:52%"></span><span style="height:44%"></span>
+              <span style="height:66%"></span><span style="height:58%"></span><span style="height:80%"></span>
+              <span style="height:72%"></span><span style="height:92%"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Возможности -->
+  <section class="section" id="features">
+    <div class="container">
+      <h2 class="section__title">Всё для работы команды</h2>
+      <p class="section__sub">Три ключевых блока — выбирайте таб и смотрите.</p>
+
+      <div class="tabs">
+        <div class="tabs__head">
+          <button class="tabs__btn is-active" data-tab="analytics">Аналитика</button>
+          <button class="tabs__btn" data-tab="automation">Автоматизация</button>
+          <button class="tabs__btn" data-tab="security">Безопасность</button>
+        </div>
+
+        <div class="tabs__panels">
+          <div class="tab-panel is-active" id="tab-analytics">
+            <div class="tab-panel__grid">
+              <ul class="tab-panel__list">
+                <li><b>Дашборды в реальном времени</b> — загрузка команды, дедлайны и риск-блокеры на одном экране.</li>
+                <li><b>Отчёты за один клик</b> — прогресс по задачам, спринтам и сотрудникам.</li>
+                <li><b>Прогноз сроков</b> — Nimbus AI предсказывает срыв дедлайнов за 7 дней.</li>
+              </ul>
+              <div class="tab-panel__visual panel-v--analytics" aria-hidden="true">
+                <div class="pv-ring"><span>87%</span>задач в срок</div>
+                <div class="pv-bars"><span style="height:60%"></span><span style="height:75%"></span><span style="height:50%"></span><span style="height:90%"></span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="tab-automation">
+            <div class="tab-panel__grid">
+              <ul class="tab-panel__list">
+                <li><b>Авто-назначение</b> — задачи сами распределяются по загрузке сотрудников.</li>
+                <li><b>Правила</b> — «если тег = срочно, то уведомить в Telegram».</li>
+                <li><b>Шаблоны проектов</b> — запуск нового проекта за 10 минут.</li>
+              </ul>
+              <div class="tab-panel__visual panel-v--auto" aria-hidden="true">
+                <div class="pa-flow">
+                  <span>Тикет</span><i>→</i><span>Правило</span><i>→</i><span>Команда</span>
+                </div>
+                <span class="pa-ok">
+                  <svg class="pa-ok__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  1 240 задач автоматизировано
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="tab-security">
+            <div class="tab-panel__grid">
+              <ul class="tab-panel__list">
+                <li><b>Шифрование AES-256</b> — данные защищены на всех уровнях.</li>
+                <li><b>Роли и права доступа</b> — каждый видит только своё.</li>
+                <li><b>SSO и двухфакторная аутентификация</b> — из коробки.</li>
+              </ul>
+              <div class="tab-panel__visual panel-v--sec" aria-hidden="true">
+                <div class="pv-shield">
+                  <svg width="64" height="64" viewBox="0 0 24 24" fill="none"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <span class="pa-ok">
+                  <svg class="pa-ok__icon" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  AES-256 · SSO · 2FA
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Тарифы -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <h2 class="section__title">Простые тарифы</h2>
+      <p class="section__sub">Начните бесплатно — платите, когда вырастете.</p>
+
+      <div class="pricing">
+        <div class="price-card">
+          <h3>Базовый</h3>
+          <div class="price-card__value"><b>0 ₽</b><span>/мес</span></div>
+          <ul>
+            <li>До 5 участников</li>
+            <li>Задачи и доски</li>
+            <li>Базовые дашборды</li>
+          </ul>
+          <a href="#cta" class="btn btn--ghost btn--block">Начать</a>
+        </div>
+
+        <div class="price-card price-card--hot">
+          <span class="price-card__tag">Популярный</span>
+          <h3>Про</h3>
+          <div class="price-card__value"><b>12 ₽</b><span>/мес</span></div>
+          <ul>
+            <li>Безлимит участников</li>
+            <li>Nimbus AI и прогнозы</li>
+            <li>Автоматизации и правила</li>
+            <li>Приоритетная поддержка</li>
+          </ul>
+          <a href="#cta" class="btn btn--primary btn--block">Выбрать Про</a>
+        </div>
+
+        <div class="price-card">
+          <h3>Бизнес</h3>
+          <div class="price-card__value"><b>39 ₽</b><span>/мес</span></div>
+          <ul>
+            <li>SSO и продвинутые права</li>
+            <li>SLA 99.99%</li>
+            <li>Персональный менеджер</li>
+          </ul>
+          <a href="#cta" class="btn btn--ghost btn--block">Связаться</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container container--narrow">
+      <h2 class="section__title">Частые вопросы</h2>
+
+      <div class="faq">
+        <details class="faq__item" open>
+          <summary>Можно ли попробовать бесплатно?</summary>
+          <p>Да. Тариф «Базовый» бесплатен навсегда, а «Про» доступен на 14 дней пробного периода без карты.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Перенести данные из другого сервиса?</summary>
+          <p>У нас есть импорт из Trello, Jira и Notion — займёт не больше 5 минут.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Что с моими данными, если я отменю тариф?</summary>
+          <p>Вы получаете полный экспорт в CSV/JSON, а данные хранятся ещё 30 дней после отмены.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Есть ли мобильное приложение?</summary>
+          <p>Да, для iOS и Android — синхронизация в реальном времени со всеми проектами.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--cta" id="cta">
+    <div class="container container--narrow cta">
+      <h2 class="cta__title">Готовы ускорить команду?</h2>
+      <p class="cta__sub">Зарегистрируйтесь за 2 минуты. Пробный период «Про» — 14 дней.</p>
+      <a href="#top" class="btn btn--primary btn--lg">Создать аккаунт</a>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© 2026 Nimbus</span>
+      <nav>
+        <a href="#features">Возможности</a>
+        <a href="#pricing">Тарифы</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
