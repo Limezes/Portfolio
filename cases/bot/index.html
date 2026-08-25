@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LimeBot — Telegram-бот для заявок и продаж</title>
+  <meta name="description" content="LimeBot — Telegram-бот, который принимает заявки, отвечает на вопросы, проводит оплату и продаёт без участия человека. Проект студии Lime Studio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__logo">
+        <span class="nav__logo-mark" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        Lime<span class="accent">Bot</span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#features">Возможности</a>
+        <a href="#how">Как работает</a>
+        <a href="#pricing">Тарифы</a>
+      </nav>
+      <div class="nav__actions">
+        <a href="#cta" class="btn btn--primary">Запустить бота</a>
+        <button class="nav__burger" id="navBurger" aria-label="Открыть меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="hero__glow hero__glow--1" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--2" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <span class="badge" data-reveal>
+            <span class="badge__dot" aria-hidden="true"></span>
+            Telegram-бот под ключ
+          </span>
+          <h1 class="hero__title" data-reveal>Бот, который <span class="accent">принимает заявки</span> и продаёт</h1>
+          <p class="hero__sub" data-reveal>Приём заявок, ответы на вопросы, рассылки и оплата прямо в чате. Бот работает 24/7 — без менеджеров и выходных.</p>
+          <div class="hero__actions" data-reveal>
+            <a href="#cta" class="btn btn--primary btn--lg">Запустить бота</a>
+            <a href="#how" class="btn btn--ghost btn--lg">Как это работает</a>
+          </div>
+          <div class="hero__stats" data-reveal>
+            <div class="stat"><b>24/7</b><span>приём заявок</span></div>
+            <div class="stat"><b>100%</b><span>оплата в чате</span></div>
+            <div class="stat"><b>5–10</b><span>дней до запуска</span></div>
+          </div>
+        </div>
+
+        <!-- Мокап телефона -->
+        <div class="phone" data-reveal aria-label="Демонстрация диалога с ботом">
+          <div class="phone__notch" aria-hidden="true"></div>
+          <div class="phone__head">
+            <span class="phone__avatar" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4Z"/></svg>
+            </span>
+            <div class="phone__name"><b>LimeBot</b><span><i class="phone__online" aria-hidden="true"></i> онлайн</span></div>
+          </div>
+          <div class="phone__chat" id="phoneChat">
+            <!-- сообщения добавляются из js/main.js -->
+          </div>
+          <div class="phone__bar" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Возможности -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <span class="section__eyebrow">Возможности</span>
+          <h2 class="section__title">Что умеет <span class="accent">LimeBot</span></h2>
+          <p class="section__sub">Всё, что нужно для продаж и поддержки — в одном диалоге с клиентом.</p>
+        </div>
+
+        <div class="features" data-reveal-group>
+          <article class="feature" data-reveal>
+            <span class="feature__icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
+            </span>
+            <h3>Приём заявок</h3>
+            <p>Клиент оставляет заявку, бот оформляет её в удобной форме и сразу уведомляет вас.</p>
+          </article>
+          <article class="feature" data-reveal>
+            <span class="feature__icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
+            </span>
+            <h3>Рассылки</h3>
+            <p>Точечные рассылки по сегментам клиентов: новости, акции, напоминания о записи.</p>
+          </article>
+          <article class="feature" data-reveal>
+            <span class="feature__icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/></svg>
+            </span>
+            <h3>Оплата в чате</h3>
+            <p>Приём оплаты внутри диалога: счёт, оплата, автоматическое подтверждение заказа.</p>
+          </article>
+          <article class="feature" data-reveal>
+            <span class="feature__icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg>
+            </span>
+            <h3>Интеграции</h3>
+            <p>Подключение к сайтам, CRM и вашим сервисам — данные сходятся в одном месте.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Как работает -->
+    <section class="section section--soft" id="how">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <span class="section__eyebrow">Процесс</span>
+          <h2 class="section__title">Как это <span class="accent">работает</span></h2>
+          <p class="section__sub">Три простых шага — и бот принимает первые заявки.</p>
+        </div>
+
+        <div class="steps" data-reveal-group>
+          <div class="step" data-reveal>
+            <b>01</b>
+            <h3>Обсуждаем задачу</h3>
+            <p>Разбираем, что должен делать бот: заявки, оплата, рассылки. Фиксирую сценарий и цену.</p>
+          </div>
+          <div class="step" data-reveal>
+            <b>02</b>
+            <h3>Собираю бота</h3>
+            <p>Разрабатываю бота и бэкенд, тестируем вместе на тестовом чате.</p>
+          </div>
+          <div class="step" data-reveal>
+            <b>03</b>
+            <h3>Запускаем</h3>
+            <p>Публикуем бота, подключаем к вашим каналам и обучаем команду работе с ним.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Тарифы -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <span class="section__eyebrow">Тарифы</span>
+          <h2 class="section__title">Простые <span class="accent">цены</span></h2>
+          <p class="section__sub">Фиксированная стоимость под ключ — без скрытых доплат.</p>
+        </div>
+
+        <div class="pricing" data-reveal-group>
+          <article class="price-card" data-reveal>
+            <h3>Старт</h3>
+            <div class="price-card__value"><b>20 000 ₽</b><span>/проект</span></div>
+            <ul>
+              <li>Один сценарий: заявки или FAQ</li>
+              <li>Уведомления в Telegram</li>
+              <li>Запуск за 5–7 дней</li>
+            </ul>
+            <a href="#cta" class="btn btn--ghost btn--block">Выбрать</a>
+          </article>
+
+          <article class="price-card price-card--hot" data-reveal>
+            <span class="price-card__tag">Популярный</span>
+            <h3>Бизнес</h3>
+            <div class="price-card__value"><b>45 000 ₽</b><span>/проект</span></div>
+            <ul>
+              <li>Заявки + оплата в чате</li>
+              <li>Рассылки по сегментам</li>
+              <li>Админ-панель заявок</li>
+              <li>Запуск за 7–10 дней</li>
+            </ul>
+            <a href="#cta" class="btn btn--primary btn--block">Выбрать</a>
+          </article>
+
+          <article class="price-card" data-reveal>
+            <h3>Под ключ</h3>
+            <div class="price-card__value"><b>от 90 000 ₽</b><span>/проект</span></div>
+            <ul>
+              <li>Кастомные сценарии</li>
+              <li>Интеграции с сайтом и CRM</li>
+              <li>Сложная логика и аналитика</li>
+              <li>Срок — по задаче</li>
+            </ul>
+            <a href="#cta" class="btn btn--ghost btn--block">Обсудить</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--soft" id="cta">
+      <div class="container container--narrow">
+        <div class="cta" data-reveal>
+          <h2 class="cta__title">Запустите своего <span class="accent">бота</span></h2>
+          <p class="cta__sub">Оставьте заявку — вернусь в течение дня с ценой и сроками.</p>
+          <form class="cta__form" id="ctaForm" novalidate>
+            <input type="text" name="name" placeholder="Ваше имя" required autocomplete="name">
+            <input type="text" name="contact" placeholder="Email или Telegram" required>
+            <textarea name="message" rows="3" placeholder="Что должен делать бот?" required></textarea>
+            <button type="submit" class="btn btn--primary btn--lg btn--block">Отправить заявку</button>
+            <p class="cta__success" id="ctaSuccess" hidden>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              Заявка отправлена! Отвечу в течение дня.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© 2026 LimeBot · Студия Lime Studio</span>
+      <nav>
+        <a href="#features">Возможности</a>
+        <a href="#how">Как работает</a>
+        <a href="#pricing">Тарифы</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
