@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PULSE — студия фитнеса</title>
+  <meta name="description" content="PULSE — студия групповых и персональных тренировок. Сила, энергия и результат. Первая тренировка бесплатно.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Навигация -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__logo">PULSE<span>_</span></a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#schedule">Расписание</a>
+        <a href="#coaches">Тренеры</a>
+        <a href="#pricing">Тарифы</a>
+      </nav>
+      <div class="nav__actions">
+        <a href="#signup" class="btn btn--accent">Записаться</a>
+        <button class="nav__burger" id="navBurger" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="hero__bg" aria-hidden="true"><img src="../../images/case-pulse.jpg" alt="" loading="eager"></div>
+    <div class="hero__glow"></div>
+    <div class="container hero__inner">
+      <h1 class="hero__title">Запусти<br>свой <span>пульс</span></h1>
+      <p class="hero__sub">Студия, где тренировки бьются в одном ритме с твоими целями. Силовые, кардио, йога и персональные программы — для любого уровня.</p>
+      <div class="hero__actions">
+        <a href="#signup" class="btn btn--accent btn--lg">Первая тренировка — бесплатно</a>
+        <a href="#schedule" class="btn btn--ghost btn--lg">Смотреть расписание</a>
+      </div>
+      <div class="hero__stats">
+        <div class="stat"><b>12</b><span>тренеров</span></div>
+        <div class="stat"><b>40+</b><span>занятий в неделю</span></div>
+        <div class="stat"><b>800+</b><span>участников</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Бегущая строка -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>СИЛА</span><i></i><span>ЭНЕРГИЯ</span><i></i><span>РЕЗУЛЬТАТ</span><i></i>
+      <span>СИЛА</span><i></i><span>ЭНЕРГИЯ</span><i></i><span>РЕЗУЛЬТАТ</span><i></i>
+      <span>СИЛА</span><i></i><span>ЭНЕРГИЯ</span><i></i><span>РЕЗУЛЬТАТ</span><i></i>
+    </div>
+  </div>
+
+  <!-- Расписание -->
+  <section class="section" id="schedule">
+    <div class="container">
+      <h2 class="section__title">Расписание</h2>
+      <p class="section__sub">Нажмите на занятие, чтобы узнать подробности.</p>
+
+      <div class="schedule">
+        <article class="sch-card" data-open="1">
+          <div class="sch-card__head">
+            <span class="sch-card__day">ПН · 18:00</span>
+            <h3>Силовая 45</h3>
+            <button class="sch-card__btn" aria-label="Подробнее">+</button>
+          </div>
+          <p class="sch-card__body">Круговая силовая тренировка на все группы мышц. Гантели, резинки и собственный вес. Подходит новичкам.</p>
+        </article>
+        <article class="sch-card" data-open="2">
+          <div class="sch-card__head">
+            <span class="sch-card__day">ВТ · 09:00</span>
+            <h3>Утренний заряд</h3>
+            <button class="sch-card__btn" aria-label="Подробнее">+</button>
+          </div>
+          <p class="sch-card__body">Лёгкое кардио и растяжка, чтобы запустить день. 30 минут энергии и бодрости.</p>
+        </article>
+        <article class="sch-card" data-open="3">
+          <div class="sch-card__head">
+            <span class="sch-card__day">СР · 19:30</span>
+            <h3>HIIT</h3>
+            <button class="sch-card__btn" aria-label="Подробнее">+</button>
+          </div>
+          <p class="sch-card__body">Интервальная тренировка высокой интенсивности. Максимальное жиросжигание за короткое время.</p>
+        </article>
+        <article class="sch-card" data-open="4">
+          <div class="sch-card__head">
+            <span class="sch-card__day">ЧТ · 20:00</span>
+            <h3>Йога-релакс</h3>
+            <button class="sch-card__btn" aria-label="Подробнее">+</button>
+          </div>
+          <p class="sch-card__body">Восстановление, гибкость и дыхание. Идеально после насыщенной недели.</p>
+        </article>
+        <article class="sch-card" data-open="5">
+          <div class="sch-card__head">
+            <span class="sch-card__day">ПТ · 18:30</span>
+            <h3>Функциональный</h3>
+            <button class="sch-card__btn" aria-label="Подробнее">+</button>
+          </div>
+          <p class="sch-card__body">Тренировка на функциональные движения: канфлип, санки, кроссфит-элементы.</p>
+        </article>
+        <article class="sch-card" data-open="6">
+          <div class="sch-card__head">
+            <span class="sch-card__day">СБ · 11:00</span>
+            <h3>Персональная</h3>
+            <button class="sch-card__btn" aria-label="Подробнее">+</button>
+          </div>
+          <p class="sch-card__body">Индивидуальная программа под вашу цель: похудение, набор массы или реабилитация.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Тренеры -->
+  <section class="section" id="coaches">
+    <div class="container">
+      <h2 class="section__title">Тренеры</h2>
+      <p class="section__sub">Сертифицированные специалисты, которые ведут вас к цели.</p>
+
+      <div class="coaches">
+        <div class="coach">
+          <div class="coach__avatar"><img src="../../images/coach-1.jpg" alt="Мария С." loading="lazy"></div>
+          <h3>Мария С.</h3>
+          <span>Силовые · CrossFit</span>
+        </div>
+        <div class="coach">
+          <div class="coach__avatar"><img src="../../images/coach-2.jpg" alt="Андрей К." loading="lazy"></div>
+          <h3>Андрей К.</h3>
+          <span>HIIT · Кардио</span>
+        </div>
+        <div class="coach">
+          <div class="coach__avatar"><img src="../../images/coach-3.jpg" alt="Дима Л." loading="lazy"></div>
+          <h3>Дима Л.</h3>
+          <span>Йога · Растяжка</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Тарифы -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <h2 class="section__title">Тарифы</h2>
+      <p class="section__sub">Без скрытых платежей. Заморозка — 14 дней.</p>
+
+      <div class="pricing">
+        <div class="price-card">
+          <h3>Разовый</h3>
+          <div class="price-card__value"><b>700 ₽</b><span>/занятие</span></div>
+          <ul>
+            <li>Любая групповая тренировка</li>
+            <li>Доступ в день занятия</li>
+            <li>Раздевалка и душ</li>
+          </ul>
+          <a href="#signup" class="btn btn--ghost btn--block">Купить</a>
+        </div>
+
+        <div class="price-card price-card--hot">
+          <span class="price-card__tag">Хит</span>
+          <h3>Безлимит</h3>
+          <div class="price-card__value"><b>3 900 ₽</b><span>/мес</span></div>
+          <ul>
+            <li>Все групповые занятия</li>
+            <li>Персональная программа</li>
+            <li>Консультация нутрициолога</li>
+            <li>Заморозка 14 дней</li>
+          </ul>
+          <a href="#signup" class="btn btn--accent btn--block">Купить</a>
+        </div>
+
+        <div class="price-card">
+          <h3>Персональный</h3>
+          <div class="price-card__value"><b>1 900 ₽</b><span>/занятие</span></div>
+          <ul>
+            <li>Тренер 1-на-1</li>
+            <li>Индивидуальный план питания</li>
+            <li>Контроль прогресса</li>
+          </ul>
+          <a href="#signup" class="btn btn--ghost btn--block">Купить</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Форма записи -->
+  <section class="section" id="signup">
+    <div class="container container--narrow">
+      <div class="signup">
+        <h2 class="section__title">Запишитесь на первую тренировку</h2>
+        <p class="section__sub">Оставьте заявку — перезвоним и подберём удобное время.</p>
+
+        <form class="signup__form" id="signupForm" novalidate>
+          <input type="text" name="name" placeholder="Ваше имя" required>
+          <input type="tel" name="phone" placeholder="+7 900 000-00-00" required>
+          <select name="class">
+            <option value="">Выберите направление</option>
+            <option>Силовая 45</option>
+            <option>Утренний заряд</option>
+            <option>HIIT</option>
+            <option>Йога-релакс</option>
+            <option>Функциональный</option>
+            <option>Персональная</option>
+          </select>
+          <button type="submit" class="btn btn--accent btn--lg btn--block">Записаться</button>
+          <p class="signup__note">Нажимая кнопку, вы соглашаетесь с политикой обработки данных.</p>
+          <div class="signup__success" id="signupSuccess" hidden>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            Заявка отправлена! Мы перезвоним в течение часа.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© 2026 PULSE</span>
+      <span>Москва, ул. Энергетическая, 10</span>
+      <a href="tel:+79000000000">+7 900 000-00-00</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
