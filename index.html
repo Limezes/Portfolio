@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lime — разработка сайтов и Telegram-ботов</title>
+  <meta name="description" content="Lime — CEO и основатель студии разработки. Лендинги, интернет-магазины, корпоративные сайты и Telegram-боты под ключ. Фронтенд и бэкенд — как единое целое.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/portfolio.css">
+</head>
+<body>
+
+  <!-- Навигация -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__logo">
+        <img src="images/logo.png" alt="Lime" class="nav__logo-img" aria-hidden="true">
+        <span>Lime</span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#works" data-i18n="navWorks">Работы</a>
+        <a href="#about" data-i18n="navAbout">Обо мне</a>
+        <a href="#services" data-i18n="navServices">Услуги</a>
+        <a href="#contact" data-i18n="navContact">Контакты</a>
+      </nav>
+      <div class="nav__actions">
+        <div class="nav__lang" id="langSwitch" aria-label="Language">
+          <button type="button" class="nav__lang-btn is-active" data-lang="ru" aria-pressed="true">RU</button>
+          <button type="button" class="nav__lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a href="#contact" class="btn btn--lime" data-i18n="navCta">Обсудить проект</a>
+        <button class="nav__burger" id="navBurger" aria-label="Открыть меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="hero__eyebrow" data-reveal>
+            <span class="hero__dot" aria-hidden="true"></span>
+            <span data-i18n="heroBadge">Открыт к новым проектам</span>
+          </span>
+          <p class="hero__role mono" data-reveal data-i18n="heroAvatar">CEO · основатель студии</p>
+          <h1 class="hero__title" data-reveal data-i18n-html="heroTitle">Сайты и боты,<br>которые <span class="accent">работают</span> на&nbsp;вас</h1>
+          <p class="hero__sub" data-reveal data-i18n="heroSub">Лендинги, интернет-магазины, корпоративные сайты и Telegram-боты под ключ. Я — CEO и основатель студии, веду проект от идеи до запуска.</p>
+          <div class="hero__actions" data-reveal>
+            <a href="#contact" class="btn btn--lime btn--lg" data-i18n="heroCta">Обсудить проект</a>
+            <a href="https://t.me/Maxim_Lime" class="btn-icon" target="_blank" rel="noopener" aria-label="Telegram">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4Z"/></svg>
+            </a>
+          </div>
+
+          <div class="hero__stats" data-reveal-group>
+            <div class="stat" data-reveal><span class="stat__num"><span data-count="8">0</span><span class="stat__unit">+</span></span> <span data-i18n="statProjects">проектов</span></div>
+            <div class="stat" data-reveal><span class="stat__num"><span data-count="3">0</span></span> <span data-i18n="statDays">дня до запуска</span></div>
+            <div class="stat" data-reveal><span class="stat__num"><span data-count="100">0</span><span class="stat__unit">%</span></span> <span data-i18n="statAdaptive">адаптивность</span></div>
+            <div class="stat" data-reveal><span class="stat__num"><span class="stat__unit">∞</span></span> <span data-i18n="statSupport">поддержка</span></div>
+          </div>
+        </div>
+
+        <div class="hero__visual" data-reveal>
+          <figure class="collage collage--hero" aria-label="Скриншоты проектов">
+            <span class="collage__shot collage__shot--a"><img src="images/shots/nimbus-hero.jpg" alt="Nimbus — облачная платформа" loading="lazy"></span>
+            <span class="collage__shot collage__shot--b"><img src="images/shots/pulse-hero.jpg" alt="PULSE — фитнес-студия" loading="lazy"></span>
+            <span class="collage__shot collage__shot--c"><img src="images/shots/bot-hero.jpg" alt="LimeBot — Telegram-бот" loading="lazy"></span>
+            <figcaption class="collage__tag mono" data-i18n="heroCollageTag">// живые демо — откройте сами</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Бегущая строка -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__wrap">
+        <div class="ticker__group">
+          <span data-i18n="tickerSites">Сайты</span><i></i><span class="is-active" data-i18n="tickerLanding">Лендинги</span><i></i><span data-i18n="tickerShops">Интернет-магазины</span><i></i><span class="is-active" data-i18n="tickerCorp">Корпоративные сайты</span><i></i><span data-i18n="tickerBots">Telegram-боты</span><i></i><span class="is-active" data-i18n="tickerBackend">Бэкенд</span><i></i><span data-i18n="tickerCode">Помощь в коде</span><i></i>
+          <span data-i18n="tickerSites">Сайты</span><i></i><span class="is-active" data-i18n="tickerLanding">Лендинги</span><i></i><span data-i18n="tickerShops">Интернет-магазины</span><i></i><span class="is-active" data-i18n="tickerCorp">Корпоративные сайты</span><i></i><span data-i18n="tickerBots">Telegram-боты</span><i></i><span class="is-active" data-i18n="tickerBackend">Бэкенд</span><i></i><span data-i18n="tickerCode">Помощь в коде</span><i></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Работы -->
+    <section class="section" id="works">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <span class="section__eyebrow"><span class="section__num">01</span><span class="section__eyebrow-text" data-i18n="worksEyebrow">Портфолио</span></span>
+          <h2 class="section__title" data-i18n-html="worksTitle">Живые <span class="accent">проекты</span></h2>
+          <p class="section__sub" data-i18n="worksSub">Каждый кейс — работающее демо. Откройте и посмотрите в действии.</p>
+        </div>
+
+        <div class="journal" data-reveal-group>
+          <!-- Featured: Nimbus -->
+          <article class="journal-card journal-card--featured" data-reveal>
+            <a class="journal__img" href="cases/startup/" target="_blank" rel="noopener">
+              <span class="collage">
+                <span class="collage__main"><img src="images/shots/nimbus-hero.jpg" alt="Nimbus — главный экран" loading="lazy"></span>
+                <span class="collage__tile collage__tile--1"><img src="images/shots/nimbus-features.jpg" alt="Nimbus — возможности" loading="lazy"></span>
+                <span class="collage__tile collage__tile--2"><img src="images/shots/nimbus-pricing.jpg" alt="Nimbus — тарифы" loading="lazy"></span>
+              </span>
+              <span class="journal__open">
+                <span data-i18n="caseOpen">Открыть демо</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+              </span>
+            </a>
+            <div class="journal__info">
+              <div class="journal__meta">
+                <span class="journal__index" aria-hidden="true">01 / 05</span>
+                <div class="journal__tags"><span class="tag" data-i18n="case1Tag1">Стартап · SaaS</span><span class="tag">HTML · CSS · JS</span></div>
+              </div>
+              <h3 class="journal__name" data-i18n="case1Name">Nimbus — облачная платформа для команд</h3>
+              <p class="journal__desc" data-i18n="case1Desc">Тёмный сайт в стиле glassmorphism для IT-продукта: интерактивные табы возможностей, тарифы и FAQ.</p>
+            </div>
+          </article>
+
+          <!-- Kilo -->
+          <article class="journal-card" data-reveal>
+            <a class="journal__img" href="cases/shop/" target="_blank" rel="noopener">
+              <span class="collage">
+                <span class="collage__main"><img src="images/shots/kilo-hero.jpg" alt="Kilo — главный экран" loading="lazy"></span>
+                <span class="collage__tile collage__tile--1"><img src="images/shots/kilo-catalog.jpg" alt="Kilo — каталог" loading="lazy"></span>
+                <span class="collage__tile collage__tile--2"><img src="images/shots/kilo-features.jpg" alt="Kilo — преимущества" loading="lazy"></span>
+              </span>
+              <span class="journal__open">
+                <span data-i18n="caseOpen">Открыть демо</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+              </span>
+            </a>
+            <div class="journal__info">
+              <div class="journal__meta">
+                <span class="journal__index" aria-hidden="true">02 / 05</span>
+                <div class="journal__tags"><span class="tag" data-i18n="case2Tag1">Интернет-магазин</span><span class="tag">HTML · CSS · JS</span></div>
+              </div>
+              <h3 class="journal__name" data-i18n="case2Name">Kilo — магазин техники с корзиной</h3>
+              <p class="journal__desc" data-i18n="case2Desc">Светлый магазин: каталог с фильтрами, рабочая корзина на JavaScript и модалка товара.</p>
+            </div>
+          </article>
+
+          <!-- PULSE -->
+          <article class="journal-card" data-reveal>
+            <a class="journal__img" href="cases/fitness/" target="_blank" rel="noopener">
+              <span class="collage">
+                <span class="collage__main"><img src="images/shots/pulse-hero.jpg" alt="PULSE — главный экран" loading="lazy"></span>
+                <span class="collage__tile collage__tile--1"><img src="images/shots/pulse-schedule.jpg" alt="PULSE — расписание" loading="lazy"></span>
+                <span class="collage__tile collage__tile--2"><img src="images/shots/pulse-pricing.jpg" alt="PULSE — тарифы" loading="lazy"></span>
+              </span>
+              <span class="journal__open">
+                <span data-i18n="caseOpen">Открыть демо</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+              </span>
+            </a>
+            <div class="journal__info">
+              <div class="journal__meta">
+                <span class="journal__index" aria-hidden="true">03 / 05</span>
+                <div class="journal__tags"><span class="tag" data-i18n="case3Tag1">Фитнес-студия</span><span class="tag">HTML · CSS · JS</span></div>
+              </div>
+              <h3 class="journal__name" data-i18n="case3Name">PULSE — сайт студии с расписанием</h3>
+              <p class="journal__desc" data-i18n="case3Desc">Энергичный тёмный сайт с неоновым акцентом: расписание, тренеры и форма записи.</p>
+            </div>
+          </article>
+
+          <!-- LimeBot -->
+          <article class="journal-card" data-reveal>
+            <a class="journal__img" href="cases/bot/" target="_blank" rel="noopener">
+              <span class="collage">
+                <span class="collage__main"><img src="images/shots/bot-hero.jpg" alt="LimeBot — главный экран" loading="lazy"></span>
+                <span class="collage__tile collage__tile--1"><img src="images/shots/bot-features.jpg" alt="LimeBot — возможности" loading="lazy"></span>
+                <span class="collage__tile collage__tile--2"><img src="images/shots/bot-pricing.jpg" alt="LimeBot — тарифы" loading="lazy"></span>
+              </span>
+              <span class="journal__open">
+                <span data-i18n="caseOpen">Открыть демо</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+              </span>
+            </a>
+            <div class="journal__info">
+              <div class="journal__meta">
+                <span class="journal__index" aria-hidden="true">04 / 05</span>
+                <div class="journal__tags"><span class="tag" data-i18n="case4Tag1">Telegram-бот</span><span class="tag">Backend</span></div>
+              </div>
+              <h3 class="journal__name" data-i18n="case4Name">LimeBot — бот для заявок и продаж</h3>
+              <p class="journal__desc" data-i18n="case4Desc">Принимает заявки, отвечает на вопросы и продаёт без участия человека.</p>
+            </div>
+          </article>
+
+          <!-- Nexus API -->
+          <article class="journal-card" data-reveal>
+            <a class="journal__img" href="cases/api/" target="_blank" rel="noopener">
+              <span class="collage">
+                <span class="collage__main"><img src="images/screen1.png" alt="Backend — главный экран" loading="lazy"></span>
+                <span class="collage__tile collage__tile--1"><img src="images/screen2.png" alt="Backend — код" loading="lazy"></span>
+                <span class="collage__tile collage__tile--2"><img src="images/screen3.png" alt="Backend — результат" loading="lazy"></span>
+              </span>
+              <span class="journal__open">
+                <span data-i18n="caseOpen">Открыть демо</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+              </span>
+            </a>
+            <div class="journal__info">
+              <div class="journal__meta">
+                <span class="journal__index" aria-hidden="true">05 / 05</span>
+                <div class="journal__tags"><span class="tag">C++</span><span class="tag">Python</span></div>
+              </div>
+              <h3 class="journal__name">Бэкенд разработка</h3>
+              <p class="journal__desc">Высоконагруженные системы, микросервисы и API на C++ и Python.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Обо мне -->
+    <section class="section section--soft" id="about">
+      <div class="container">
+        <div class="bento" data-reveal-group>
+          <div class="bento__media" data-reveal>
+            <div class="bento__collage">
+              <img class="bento__collage--a" src="images/shots/kilo-hero.jpg" alt="Kilo — магазин техники" loading="lazy">
+              <img class="bento__collage--b" src="images/shots/pulse-schedule.jpg" alt="PULSE — расписание" loading="lazy">
+              <img class="bento__collage--c" src="images/shots/bot-features.jpg" alt="LimeBot — возможности" loading="lazy">
+            </div>
+          </div>
+          <div class="bento__text" data-reveal>
+            <span class="section__eyebrow"><span class="section__num">02</span><span class="section__eyebrow-text">Обо мне</span></span>
+            <h2 class="section__title">Привет, я <span class="accent">Maxim Lime</span></h2>
+            <p>Я люблю превращать идеи в работающие продукты. Делаю сайты, Telegram-ботов и собственные проекты под ключ: от первой идеи и макета до бэкенда, запуска и дальнейшей поддержки.</p>
+            <p>Работаю напрямую с клиентом, без лишних посредников и менеджеров. Поэтому вы всегда понимаете, что происходит с проектом и на каком мы этапе.</p>
+            <p>Для серверной части использую собственную платформу Lime Studio, которую развиваю вместе со своими проектами. Она позволяет мне держать фронтенд и бэкенд в одной системе и быстрее доводить идеи до рабочего продукта.</p>
+            <p><strong>Чем занимаюсь:</strong></p>
+            <ul class="check-list">
+              <li>сайты и веб-приложения под ключ</li>
+              <li>Telegram-боты и интеграции</li>
+              <li>фронтенд и бэкенд</li>
+              <li>собственные продукты и эксперименты</li>
+              <li>поддержка и развитие готовых проектов</li>
+            </ul>
+            <p>Моя цель простая: делать вещи, которыми хочется пользоваться самому. А главная амбиция: жёлтая Ferrari. Поэтому скучать мне некогда.</p>
+          </div>
+          <div class="bento__card bento__card--quote" data-reveal>
+            <p class="bento__quote">Не обязательно знать, куда приведёт путь. Достаточно продолжать идти.</p>
+            <img class="bento__quote-photo" src="images/photo.png" alt="Maxim Lime" loading="lazy">
+          </div>
+          <div class="bento__card" data-reveal>
+            <span class="section__eyebrow"><span class="section__num">03</span><span class="section__eyebrow-text" data-i18n="stackEyebrow">Стек</span></span>
+            <h3 data-i18n="stackTitle">Мой инструментарий</h3>
+            <p data-i18n="stackP">Веду проекты под ключ: от идеи до запуска. Без менеджеров и лишних звонков.</p>
+            <div class="stack">
+              <div class="stack__group">
+                <span class="stack__label" data-i18n="stackFront">Фронтенд</span>
+                <div class="stack__tags">
+                  <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">React</span><span class="tag">Адаптивная вёрстка</span>
+                </div>
+              </div>
+              <div class="stack__group">
+                <span class="stack__label" data-i18n="stackBack">Бэкенд</span>
+                <div class="stack__tags">
+                  <span class="tag">Python</span><span class="tag">C++</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span>
+                </div>
+              </div>
+              <div class="stack__group">
+                <span class="stack__label" data-i18n="stackProcess">Инструменты</span>
+                <div class="stack__tags">
+                  <span class="tag">Git</span><span class="tag">Linux</span><span class="tag">REST API</span><span class="tag">Telegram API</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Услуги и цены -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <span class="section__eyebrow"><span class="section__num">04</span><span class="section__eyebrow-text" data-i18n="servicesEyebrow">Услуги</span></span>
+          <h2 class="section__title" data-i18n-html="servicesTitle">Что я <span class="accent">делаю</span></h2>
+          <p class="section__sub" data-i18n="servicesSub">Фиксированная стоимость — без «доплат по ходу».</p>
+        </div>
+
+        <div class="services" data-reveal-group>
+          <article class="service" data-reveal>
+            <span class="service__icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+            </span>
+            <h3 data-i18n="serviceLanding">Лендинг</h3>
+            <p data-i18n="serviceLandingP">Продающая страница для продукта, услуги или события.</p>
+            <div class="service__price" data-i18n="serviceLandingPrice">от 5 000 ₽</div>
+            <span class="service__term" data-i18n="serviceLandingTerm">до 5 дней</span>
+          </article>
+
+          <article class="service" data-reveal>
+            <span class="service__icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </span>
+            <h3 data-i18n="serviceShop">Интернет-магазин</h3>
+            <p data-i18n="serviceShopP">Каталог, корзина, фильтры и удобное оформление заказа.</p>
+            <div class="service__price" data-i18n="serviceShopPrice">от 8 000 ₽</div>
+            <span class="service__term" data-i18n="serviceShopTerm">до 7 дней</span>
+          </article>
+
+          <article class="service" data-reveal>
+            <span class="service__icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+            </span>
+            <h3 data-i18n="serviceCorp">Корпоративный сайт</h3>
+            <p data-i18n="serviceCorpP">Многостраничный сайт, который представляет компанию и услуги.</p>
+            <div class="service__price" data-i18n="serviceCorpPrice">от 6 000 ₽</div>
+            <span class="service__term" data-i18n="serviceCorpTerm">до 7 дней</span>
+          </article>
+
+          <article class="service service--hot" data-reveal>
+            <span class="service__icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg>
+            </span>
+            <h3><span data-i18n="serviceBot">Telegram-бот</span> <span class="tag tag--lime" data-i18n="serviceBotNew">новинка</span></h3>
+            <p data-i18n="serviceBotP">Заявки, рассылки, оплата и уведомления — бот, который продаёт без вас.</p>
+            <div class="service__price" data-i18n="serviceBotPrice">от 3 000 ₽</div>
+            <span class="service__term" data-i18n="serviceBotTerm">до 4 дней</span>
+          </article>
+
+          <article class="service" data-reveal>
+            <span class="service__icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
+            </span>
+            <h3 data-i18n="serviceHelp">Помощь в коде</h3>
+            <p data-i18n="serviceHelpP">Бэкенд и интеграции, доработка существующих проектов, решение задач.</p>
+            <div class="service__price" data-i18n="serviceHelpPrice">от 1 000 ₽ за проект</div>
+            <span class="service__term" data-i18n="serviceHelpTerm">в зависимости от масштаба</span>
+          </article>
+
+          <article class="service" data-reveal>
+            <span class="service__icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
+            </span>
+            <h3 data-i18n="serviceSupport">Поддержка и доработки</h3>
+            <p data-i18n="serviceSupportP">Правки, новые блоки и обновления уже готового сайта или бота.</p>
+            <div class="service__price" data-i18n="serviceSupportPrice">500 ₽/мес</div>
+            <span class="service__term" data-i18n="serviceSupportTerm">месяц</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="section section--soft" id="reviews">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <span class="section__eyebrow"><span class="section__num">05</span><span class="section__eyebrow-text" data-i18n="reviewsEyebrow">Отзывы</span></span>
+          <h2 class="section__title" data-i18n-html="reviewsTitle">Что <span class="accent">говорят</span></h2>
+          <p class="section__sub" data-i18n="reviewsSub">Первое место уже зарезервировано — за вами.</p>
+        </div>
+
+        <div class="reviews" data-reveal-group>
+          <article class="review-empty" data-reveal>
+            <span class="review-empty__stamp mono" data-i18n="reviewsEmptyStamp">// reserved #001</span>
+            <div class="review-empty__stars" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <div class="review-empty__slot">
+              <span class="review-empty__slot-num" aria-hidden="true">0</span>
+              <span class="review-empty__slot-avatar" aria-hidden="true">+</span>
+              <span class="review-empty__slot-name mono" data-i18n="reviewsEmptySlotName">ваше_имя_здесь</span>
+            </div>
+            <h3 class="review-empty__title" data-i18n="reviewsEmptyTitle">Первое место — ваше</h3>
+            <p class="review-empty__text" data-i18n="reviewsEmptyText">Отзывов ещё нет, и место №1 уже зарезервировано — за вами. Расскажите, как прошла работа, и ваше имя появится здесь первым.</p>
+            <a href="#contact" class="btn btn--lime" data-i18n="reviewsEmptyCta">Зарезервировать место</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head" data-reveal>
+          <span class="section__eyebrow"><span class="section__num">06</span><span class="section__eyebrow-text">FAQ</span></span>
+          <h2 class="section__title" data-i18n-html="faqTitle">Частые <span class="accent">вопросы</span></h2>
+        </div>
+
+        <div class="faq" data-reveal-group>
+          <details class="faq__item" data-reveal>
+            <summary data-i18n="faq1q">Сколько стоит сайт?</summary>
+            <p data-i18n="faq1a">Лендинг — от 5 000 ₽, интернет-магазин — от 8 000 ₽, корпоративный сайт — от 6 000 ₽, Telegram-бот — от 3 000 ₽. Помощь в коде — от 1 000 ₽ за проект.</p>
+          </details>
+          <details class="faq__item" data-reveal>
+            <summary data-i18n="faq2q">Какие сроки?</summary>
+            <p data-i18n="faq2a">Лендинг — до 5 дней, бот — до 4 дней, магазин и корпоративный сайт — до 7 дней. Сроки фиксирую в договорённости до старта.</p>
+          </details>
+          <details class="faq__item" data-reveal>
+            <summary data-i18n="faq3q">Делаете боты и бэкенд?</summary>
+            <p data-i18n="faq3a">Да. Приём заявок, рассылки, оплата и интеграции — боты, которые работают без вашего участия.</p>
+          </details>
+          <details class="faq__item" data-reveal>
+            <summary data-i18n="faq4q">Что нужно от меня для старта?</summary>
+            <p data-i18n="faq4a">Обычно достаточно пары предложений о задаче, примеров и контактов. Макеты и тексты обсудим на старте — помогу и с этим.</p>
+          </details>
+          <details class="faq__item" data-reveal>
+            <summary data-i18n="faq5q">Поддерживаете после запуска?</summary>
+            <p data-i18n="faq5a">Да. После запуска — бесплатные правки, дальше поддержка и доработки по договору 500 ₽/мес.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Контакты -->
+  <footer class="footer" id="contact">
+    <div class="container container--narrow">
+      <div class="footer__head" data-reveal>
+        <span class="section__eyebrow"><span class="section__num">07</span><span class="section__eyebrow-text" data-i18n="contactEyebrow">Контакты</span></span>
+        <h2 class="footer__title" data-i18n-html="contactTitle">Давайте <span class="accent">обсудим</span> ваш проект</h2>
+        <p class="section__sub" data-i18n="contactSub">Расскажите о задаче — отвечу в течение дня и предложу решение со сроками и ценой.</p>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate data-reveal>
+        <div class="contact-form__row">
+          <input type="text" name="name" data-i18n-ph="formNamePh" placeholder="Ваше имя" required autocomplete="name">
+          <input type="text" name="contact" data-i18n-ph="formContactPh" placeholder="Email или Telegram" required autocomplete="email">
+        </div>
+        <textarea name="message" rows="4" data-i18n-ph="formMsgPh" placeholder="Что нужно сделать? Опишите проект в пару строк." required></textarea>
+        <button type="submit" class="btn btn--lime btn--lg btn--block">
+          <span data-i18n="formSubmit">Отправить заявку</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </button>
+        <p class="contact-form__note" id="contactNote" hidden>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span data-i18n="formNote">Спасибо! Я свяжусь с вами в ближайшее время.</span>
+        </p>
+      </form>
+
+      <div class="footer__links" data-reveal-group>
+        <a href="https://t.me/Maxim_Lime" class="btn btn--lime" target="_blank" rel="noopener" data-reveal>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4Z"/></svg>
+          Telegram — @Maxim_Lime
+        </a>
+        <a href="mailto:no.lime@yandex.ru" class="btn btn--outline" data-reveal>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+          no.lime@yandex.ru
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__mark" aria-hidden="true">LIME</div>
+
+    <div class="container footer__bottom">
+      <span>© 2026 Lime</span>
+      <nav>
+        <a href="#works" data-i18n="navWorks">Работы</a>
+        <a href="#about" data-i18n="navAbout">Обо мне</a>
+        <a href="#services" data-i18n="navServices">Услуги</a>
+        <a href="#contact" data-i18n="navContact">Контакты</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

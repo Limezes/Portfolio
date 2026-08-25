@@ -1,0 +1,13 @@
+{
+  "name": "lime-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Lime — portfolio site. Screenshot tooling only (dev-time).",
+  "type": "module",
+  "scripts": {
+    "shots": "node scripts/shots.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.44.1"
+  }
+}
