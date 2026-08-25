@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Backend — C++ / Python разработка</title>
+  <meta name="description" content="Бэкенд разработка на C++ и Python. Высоконагруженные системы, API, микросервисы.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Навигация -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__logo">
+        <span class="nav__logo-mark" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M2 12h20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+        </span>
+        Backend
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#projects">Проекты</a>
+        <a href="#capabilities">Что делаю</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+      <div class="nav__actions">
+        <a href="#contact" class="btn btn--primary">Связаться</a>
+        <button class="nav__burger" id="navBurger" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="hero__bg" aria-hidden="true"><img src="../../images/case-nimbus.jpg" alt="" loading="lazy"></div>
+    <div class="hero__glow hero__glow--1"></div>
+    <div class="container hero__inner">
+      <span class="badge">
+        <svg class="badge__icon" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+        Любая сложность — не проблема
+      </span>
+      <h1 class="hero__title">Бэкенд, который <span class="grad-text">решает</span></h1>
+      <p class="hero__sub">C++ и Python. От простого API до высоконагруженных систем. Нет задачи — которую нельзя решить. Есть задача — которую нужно правильно реализовать.</p>
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary btn--lg">Смотреть проекты</a>
+        <a href="#capabilities" class="btn btn--ghost btn--lg">Что умею</a>
+      </div>
+
+      <!-- Мок-ап терминала с кодом -->
+      <div class="mockup" aria-hidden="true">
+        <div class="mockup__bar">
+          <span class="mockup__dot"></span>
+          <span class="mockup__dot"></span>
+          <span class="mockup__dot"></span>
+          <span class="mockup__url">~/projects</span>
+        </div>
+        <div class="mockup__body mockup__body--code">
+          <div class="code-sidebar">
+            <span class="code-folder">src/</span>
+            <span class="code-file">├── main.cpp</span>
+            <span class="code-file">├── api.cpp</span>
+            <span class="code-file">├── models.py</span>
+            <span class="code-file">├── handlers.py</span>
+            <span class="code-file">└── utils.py</span>
+          </div>
+          <div class="code-main">
+            <pre class="code-content"><code><span class="code-comment">// C++ — high-performance обработка</span>
+<span class="code-kw">template</span>&lt;<span class="code-kw">typename</span> T&gt;
+<span class="code-kw">auto</span> <span class="code-fn">processHighLoad</span>(<span class="code-kw">const</span> std::vector&lt;T&gt;& data) 
+    -&gt; std::future&lt;Result&gt; {
+    
+    <span class="code-kw">auto</span> promise = std::make_shared&lt;std::promise&lt;Result&gt;&gt;();
+    thread_pool_.enqueue([=, p=promise] {
+        <span class="code-kw">auto</span> result = <span class="code-fn">heavyComputation</span>(data);
+        p-&gt;set_value(std::move(result));
+    });
+    <span class="code-kw">return</span> promise-&gt;get_future();
+}
+
+<span class="code-comment"># Python — асинхронный API</span>
+<span class="code-kw">async def</span> <span class="code-fn">handle_complex_query</span>(
+    request: Request, 
+    db: AsyncSession
+) -&gt; Response:
+    <span class="code-kw">if</span> <span class="code-fn">requires_ml</span>(request):
+        result = await <span class="code-fn">run_ml_pipeline</span>(request)
+    <span class="code-kw">else</span>:
+        result = await <span class="code-fn">query_database</span>(request)
+    <span class="code-kw">return</span> JSONResponse(result)</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Проекты -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section__title">Нет нерешаемых задач</h2>
+      <p class="section__sub">Любой сложности — от MVP до enterprise.</p>
+
+      <div class="project-cards">
+        <div class="project-card">
+          <div class="project-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Микросервисы</h3>
+          <p>10+ сервисов на C++ и Python. Kubernetes, Kafka, Redis. 10M+ RPS. Сложная event-driven архитектура.</p>
+          <div class="project-card__tags"><span>C++</span><span>Python</span><span>Kafka</span><span>K8s</span></div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>High-frequency</h3>
+          <p>Низколатентный движок для алго-трейдинга. &lt;1ms задержка. C++ для скорости, Python для стратегий.</p>
+          <div class="project-card__tags"><span>C++</span><span>Python</span><span>UDP</span><span>FPGA</span></div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>ML Infrastructure</h3>
+          <p>Обучение и инференс в проде. PyTorch, TensorRT. Интеграция C++-движков. MLOps.</p>
+          <div class="project-card__tags"><span>Python</span><span>PyTorch</span><span>C++</span><span>MLOps</span></div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Распределённые системы</h3>
+          <p>Sharding, репликация, CAP-теорема на практике. Paxos/Raft. Горизонтальное масштабирование.</p>
+          <div class="project-card__tags"><span>Consensus</span><span>Sharding</span><span>ETCD</span></div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M18 20V10M12 20V4M6 20v-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>API Platform</h3>
+          <p>Enterprise API с авторизацией, rate limiting, документацией. Swagger, GraphQL, gRPC.</p>
+          <div class="project-card__tags"><span>FastAPI</span><span>gRPC</span><span>Redis</span></div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Системное программирование</h3>
+          <p>Драйверы, embedded-системы, работа с железом. Linux kernel modules, RTOS.</p>
+          <div class="project-card__tags"><span>Linux</span><span>Embedded</span><span>RTOS</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Что умею -->
+  <section class="section" id="capabilities">
+    <div class="container">
+      <h2 class="section__title">Берусь за всё</h2>
+      <p class="section__sub">Неважно насколько сложно — главное правильно спроектировать.</p>
+
+      <div class="capability-grid">
+        <div class="capability">
+          <div class="capability__num">01</div>
+          <h3>Проектирование</h3>
+          <p>Архитектура с нуля. Выбор стека под задачу. Оценка сложности и сроков.</p>
+        </div>
+        <div class="capability">
+          <div class="capability__num">02</div>
+          <h3>Оптимизация</h3>
+          <p>Профилирование, поиск bottlenecks. Ускорение в 10x и более раз.</p>
+        </div>
+        <div class="capability">
+          <div class="capability__num">03</div>
+          <h3>Масштабирование</h3>
+          <p>Горизонтальное и вертикальное. Sharding, кэширование, асинхронность.</p>
+        </div>
+        <div class="capability">
+          <div class="capability__num">04</div>
+          <h3>Интеграции</h3>
+          <p>Любые API, протоколы. От HTTP до бинарных протоколов.</p>
+        </div>
+        <div class="capability">
+          <div class="capability__num">05</div>
+          <h3>Безопасность</h3>
+          <p>Шифрование, аутентификация, аудит. OWASP compliance.</p>
+        </div>
+        <div class="capability">
+          <div class="capability__num">06</div>
+          <h3>Поддержка</h3>
+          <p>DevOps, мониторинг, логирование. 24/7 если нужно.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--cta" id="contact">
+    <div class="cta-wrapper">
+      <div class="cta-glow"></div>
+      <div class="container container--narrow cta">
+        <h2 class="cta__title">Есть сложная задача?</h2>
+        <p class="cta__sub">Расскажите — решим. Нет задач, которые нельзя решить.</p>
+        <a href="mailto:no.lime@yandex.ru" class="btn btn--primary btn--lg">Обсудить проект</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M2 12h20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+        </span>
+        <span>Backend Developer</span>
+      </div>
+      <div class="footer__links">
+        <a href="mailto:no.lime@yandex.ru">no.lime@yandex.ru</a>
+        <a href="https://t.me/Maxim_Lime" target="_blank" rel="noopener">Telegram</a>
+      </div>
+      <span class="footer__copy">© 2026</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
